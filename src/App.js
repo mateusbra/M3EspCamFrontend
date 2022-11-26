@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Api from "./Api";
-
-
+import { Button } from 'react-bootstrap';
+import Badge from 'react-bootstrap/Badge';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [URL,setURL] = useState(null);
   const [isLoading,setIsLoading] = useState(true);
@@ -12,7 +13,8 @@ function App() {
 
 
   const handleClick = async () => {
-    await Api.setMode();
+    await Api.setMode(!mode);
+    setMode(!mode);
   }
 
   useEffect(() => {async function fetchURLAndMode(){
@@ -33,14 +35,14 @@ function App() {
     </div>
     ) : (
     <div style={{}}>
-    <div style={{width:"100%",height:"70vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
+    <div style={{width:"100%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
       <div style={{width:"65%"}}>
         <img src={URL} alt={"image"} style={{width:"100%"}}/>
       </div>
     </div>
-    <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"15vh"}}>
-      
-      <button style={{width:"10vh",borderRadius:"8vh",height:"10vh"}} onClick={handleClick}> {mode ? "LIGAR" : "DESLIGAR"} SISTEMA</button>
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"15vh",flexDirection:"column"}}>
+      <div style={{marginBottom:"10vh"}}>Modo de operação:     <Badge bg="secondary">{mode ? "VIGILANTE" : "OCIOSO"}</Badge></div>
+      <Button variant="primary" size="lg" onClick={handleClick}> {mode ? "DESLIGAR" : "LIGAR"} SISTEMA</Button>
 
     </div>
     </div>
