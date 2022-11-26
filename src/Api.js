@@ -8,6 +8,7 @@ const Api = {
         return mode;
     },
     setMode: async (mode) => {
+        console.log(`${BASE_URL}setMode?mode=${mode}`)
         const req = await fetch(`${BASE_URL}setMode?mode=${mode}`,{
             method:'POST',
         });
