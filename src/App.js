@@ -31,13 +31,13 @@ function App() {
     <>
     { isLoading ? (
     <div style={{width:"100%",height:"100vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
-    <img src={"https://deltassis.com.br/assets/img/loading_icon.gif"}/>
+    <img src={"https://deltassis.com.br/assets/img/loading_icon.gif"} alt={"loading"}/>
     </div>
     ) : (
     <div style={{}}>
     <div style={{width:"100%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
       <div style={{width:"65%"}}>
-        <img src={URL} alt={"image"} style={{width:"100%"}}/>
+        <img src={URL} alt={"record_from_esp"} style={{width:"100%"}}/>
       </div>
     </div>
     <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"15vh",flexDirection:"column"}}>
