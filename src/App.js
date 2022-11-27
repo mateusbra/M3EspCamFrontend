@@ -32,7 +32,7 @@ function App() {
     </div>
     ) : (
     <div>
-      <div style={{width:"100%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
+      <div style={{maxWidth:"50%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
         <div style={{width:"65%"}}>
           <img src={URL} alt={"record_from_esp"} style={{width:"100%"}}/>
         </div>
