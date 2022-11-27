@@ -32,8 +32,8 @@ function App() {
     </div>
     ) : (
     <div>
-      <div style={{maxWidth:"50%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
-        <div style={{width:"65%"}}>
+      <div style={{maxWidth:"100%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <div style={{width:"50%"}}>
           <img src={URL} alt={"record_from_esp"} style={{width:"100%"}}/>
         </div>
       </div>
