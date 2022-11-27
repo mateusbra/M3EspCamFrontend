@@ -32,7 +32,9 @@ function App() {
     </div>
     ) : (
     <div>
-      <div style={{maxWidth:"100%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
+
+      <div style={{maxWidth:"100%",height:"50vh",display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column"}}>
+      <div style={{width:"50%",margin:"auto",textAlign:"center"}}>Úlimo registro capturado:</div>
         <div style={{width:"50%"}}>
           <img src={URL} alt={"record_from_esp"} style={{width:"100%"}}/>
         </div>
