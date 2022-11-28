@@ -16,6 +16,15 @@ const Api = {
         console.log(res);
         return res;
     },
+    setDetected: async (detected) => {
+        console.log(`${BASE_URL}setPersonDetected?person_detected=${detected}`)
+        const req = await fetch(`${BASE_URL}setPersonDetected?person_detected=${detected}`,{
+            method:'POST',
+        });
+        const res = await req.text();
+        console.log(res);
+        return res;
+    },
     getURL: async () => {
         const req = await fetch(`${BASE_URL}getURLImage`);
         const res = await req.json();
